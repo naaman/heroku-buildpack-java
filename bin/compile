@@ -50,6 +50,7 @@ if [ -f ${BUILD_DIR}/system.properties ]; then
   LOGGER_FLAGS="$LOGGER_FLAGS download_jdk"
   javaVersion=$(detect_java_version ${BUILD_DIR})
   echo -n "-----> Installing OpenJDK ${javaVersion}..."
+  export JDK_URL_1_6="http://heroku-jvm-langpack-java.s3.amazonaws.com/openjdk6-u25-heroku-temaki-with-jce.tar.gz"
   install_java ${BUILD_DIR} ${javaVersion}
   echo "done"
   cp ${BUILD_DIR}/system.properties ${CACHE_DIR}/
