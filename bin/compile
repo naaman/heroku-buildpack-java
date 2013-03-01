@@ -50,7 +50,7 @@ if [ -f ${BUILD_DIR}/system.properties ]; then
   LOGGER_FLAGS="$LOGGER_FLAGS download_jdk"
   javaVersion=$(detect_java_version ${BUILD_DIR})
   echo -n "-----> Installing OpenJDK ${javaVersion}..."
-  export JDK_URL_1_6="https://s3.amazonaws.com/heroku-jvm-langpack-java/test/openjdk6-u27-b20.tar.gz"
+  export JDK_URL_1_6="https://s3.amazonaws.com/heroku-jvm-langpack-java/test/openjdk7-u13-b30.tar.gz"
   install_java ${BUILD_DIR} ${javaVersion}
   jdk_overlay ${BUILD_DIR}
   echo "done"
